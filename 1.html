@@ -7,7 +7,10 @@
     <title>Document</title>
     <style>
         .container{
-            text-align: center;
+            position: relative;
+            margin: auto;
+            width: 27%;
+
         }
         .dots {
   cursor: pointer;
@@ -23,6 +26,33 @@
 .enable, .dots:hover {
   background-color: #717161;
 }
+   .contain{
+    position: relative;
+    margin: auto;
+    width: 6%;
+
+   }
+
+   .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+   .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
     </style>
 </head>
 <body>
@@ -31,21 +61,24 @@
     <h1 style="text-align: center;">Image Slideshow</h1>
     <br>
     <br>
-    <!-- <div class="container"> -->
-    <img src = "imgs/1.jpeg" class="images" style="width: 300px; height: 300px;">
-    <img src = "imgs/2.jpeg" class="images" style="width: 300px; height: 300px; display: none;">
-    <img src = "imgs/3.jpeg" class="images" style="width: 300px; height: 300px; display: none;">
-    <img src = "imgs/4.jpeg" class="images" style="width: 300px; height: 300px; display: none;">
+    <div class="container">
+    <img src = "imgs/1.jpeg" class="images" style="width: 500px; height: 500px;">
+    <img src = "imgs/2.jpeg" class="images" style="width: 500px; height: 500px; display: none;">
+    <img src = "imgs/3.jpeg" class="images" style="width: 500px; height: 500px; display: none;">
+    <img src = "imgs/4.jpeg" class="images" style="width: 500px; height: 500px; display: none;">
     <br>
-    <button class="dots" type="radio" onclick="currentSlide(1)" style="border: solid black 1px; height:10px; width:10px;"></button>
-    <button class="dots" type="radio" onclick="currentSlide(2)" style="border: solid black 1px; height:10px; width:10px;"></button>
-    <button class="dots" type="radio" onclick="currentSlide(3)" style="border: solid black 1px; height:10px; width:10px;"></button>   
-    <button class="dots" type="radio" onclick="currentSlide(3)" style="border: solid black 1px; height:10px; width:10px;"></button>   
-    <!-- </div> -->
+    </div>
+    <br>
+    <div class="contain">
+    <button class="dots" type="radio" onclick="currentSlide(1)" style="border: solid black 2px; font-size: 40px;"></button>
+    <button class="dots" type="radio" onclick="currentSlide(2)" style="border: solid black 2px; font-size: 40px;"></button>
+    <button class="dots" type="radio" onclick="currentSlide(3)" style="border: solid black 2px; font-size: 40px;"></button>   
+    <button class="dots" type="radio" onclick="currentSlide(3)" style="border: solid black 2px; font-size: 40px;"></button>   
+    </div>
     
 
-    <p onclick="plusSlides(-1)"><b>&#10094;</b></p>
-    <p onclick="plusSlides(1)"><b>&#10095;</b></p>
+    <p onclick="plusSlides(-1)" style="font-size: 40px;" class="prev"><b>&#10094;</b></p>
+    <p onclick="plusSlides(1)" style="font-size: 40px;" class="next"><b>&#10095;</b></p>
 
     
 
